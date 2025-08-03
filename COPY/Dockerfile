@@ -4,7 +4,7 @@ FROM almalinux:9
 RUN dnf install nginx -y
 # Delete the default index.html#
 RUN rm -rf /usr/share/nginx/html/index.html 
-# copy the required index.html from current location to the container
-COPY index.html /usr/share/nginx/html/index.html
+# copy the required files/folders from qi the container under nginx sourcce code directory
+COPY qi/ /usr/share/nginx/html/
 # daemon off is mentioned to run in foreground#
 CMD ["nginx","-g", "daemon off;"]
