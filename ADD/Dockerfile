@@ -8,5 +8,7 @@ RUN rm -rf /usr/share/nginx/html/index.html
 ADD https://raw.githubusercontent.com/DevenderMusukula/Linux-KT-Related-Documentation/refs/heads/main/10-disk-management/File-System-Management-Practical--Server-Session-Logs.txt /usr/share/nginx/html/index.html
 #Give access to nginx sourcce code folder
 RUN chmod +r /usr/share/nginx/html/index.html
+# Add .tar file to /tmp in container
+ADD sample-1.tar /tmp/
 # daemon off is mentioned to run in foreground#
 CMD ["nginx","-g", "daemon off;"]
