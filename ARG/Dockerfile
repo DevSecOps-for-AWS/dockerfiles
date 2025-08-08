@@ -1,4 +1,6 @@
-FROM almalinux:9
+
+ARG version
+FROM almalinux:${version:-9}
 ENV COURSE="DevOps" \
     DURATION="100HRS" 
 ARG INSTRUCTOR="DevenderReddyMusukula"
